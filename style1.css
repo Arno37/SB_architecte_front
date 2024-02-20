@@ -125,11 +125,14 @@ h1 {
   }
 
   main{
-    display: flex;
-    justify-content: space-between;
+    
+    justify-content: center;
     margin: 50px 100px;
+    display: grid;
+    grid-template-rows: auto 1fr; 
+    }
 
-  }
+  
   img{
     width: 19.35px;
     height: 19.35px;
@@ -146,6 +149,8 @@ h1 {
 
 h1.green{
     color:#1D6154;
+    font-weight: 700;
+    align-items: center;
 }
 
 li.connecting{
@@ -161,4 +166,26 @@ li.connecting{
     color: white;
     text-align-last: center;
 
+}
+
+ul.board{
+  display: grid;
+  margin-top: 30px;
+}
+
+.board li {
+  font-size: 11px; /* Choisissez la taille de police qui vous convient */
+  
+}
+
+body {
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  max-width: 1440px; /* Définit une largeur maximale */
+  width: 100%; /* Pour que la largeur soit de 100% sur les écrans plus petits */
+  padding: 0 20px; /* Ajoute des marges intérieures pour un peu d'espace sur les côtés */
+}
+
+.board .email {
+  background-color: white; /* Définit un fond blanc */
+  padding-bottom: 5px; /* Ajoute un peu d'espace en dessous du texte */
 }

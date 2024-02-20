@@ -5,9 +5,11 @@ async function getWorks() {
         const dataWorks = await response.json();
         
         const gallery = document.querySelector('.gallery');
-        console.log(gallery)
+        
+        
         for (const currentWork of dataWorks) {
             const figure = document.createElement('figure');
+            figure.dataset.category=currentWork.categoryId
            
             const image = document.createElement('img');
             image.src = currentWork.imageUrl
@@ -27,6 +29,12 @@ async function getWorks() {
     }
 }
 
+function setfilter(categoryId){
+
+
+}
+
+
 async function getCategories() {
     try {
         const response = await fetch('http://localhost:5678/api/categories/');
@@ -34,15 +42,21 @@ async function getCategories() {
         const dataCategories = await response.json();// Affiche la réponse dans la console
         
         const filters = document.querySelector('.filters');
-       
-        for (const currentCategories of dataCategories) {
+
+        
+        for (const currentCategory of dataCategories) {
             
             const button = document.createElement('button');
-            button.textContent = currentCategories.name;
+            button.textContent = currentCategory.name;
+            button.addEventListener("click",()=>setfilter(currentCategory.id))
+            
+        filters.appendChild(button)
 
-            filters.appendChild(button)
 
-        }
+}
+
+
+
 
 
 
