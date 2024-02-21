@@ -161,8 +161,8 @@ li.connecting {
   flex-direction: column;
   place-content: center;
   background-color: #1d6154;
-  width: 179px;
-  height: 36px;
+  width: 160px;
+  height: 40px;
   border-radius: 30px;
   color: white;
   text-align-last: center;
@@ -191,10 +191,11 @@ body {
 
 .rectangle {
   width: 379px;
-  height: 51px;
+  height: 51px; 
   background-color: #ffffff;
   box-shadow: 0px 4px 14px 0px #00000017;
   margin-top: 10px;
+  border: transparent;
 }
 
 li.forgottenpw {
@@ -218,4 +219,10 @@ li.forgottenpw {
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
+}
+.contact{
+  display: grid;
+}
+.password {
+  display: grid;
 }
