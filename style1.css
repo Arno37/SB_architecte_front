@@ -219,10 +219,25 @@ li.forgottenpw {
   line-height: 16px;
   letter-spacing: 0em;
   text-align: left;
+  padding-top: 10px;
 }
 .contact{
   display: grid;
 }
 .password {
   display: grid;
+}
+.connecting button span {
+  font-size: 16px; /* Changer la taille du texte */
+  font-family: 'Syne';
+  
+}
+
+.invisible-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  color: white;
+  font-family: 'Syne'; /* Changer la couleur du texte */
 }
