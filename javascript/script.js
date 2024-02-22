@@ -111,20 +111,19 @@ async function getCategories() {
     
           
             if (response.ok) {
-                localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MTg3NDkzOSwiZXhwIjoxNjUxOTYxMzM5fQ.JGN1p8YIfR-M-5eQ-Ypy6Ima5cKA4VbfL2xMr2MgHm4")
+                const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MTg3NDkzOSwiZXhwIjoxNjUxOTYxMzM5fQ.JGN1p8YIfR-M-5eQ-Ypy6Ima5cKA4VbfL2xMr2MgHm4'; 
+                localStorage.setItem('token', token)
                 window.location.href = 'file:///Users/arno/Desktop/SB_architecte/Portfolio-architecte-sophie-bluel/FrontEnd/index.html#';
+
             } else {
                 alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
             }
+
         } catch (error) {
             console.error('Une erreur s\'est produite lors de la tentative de connexion :', error);
             alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
         }
     }
-
-    
-    
-    
 }
 
 
