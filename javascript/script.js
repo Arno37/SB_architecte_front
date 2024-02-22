@@ -1,28 +1,3 @@
-async function login(email, password) {
-    try {
-        const response = await fetch('http://localhost:5678/api/users/login', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                email: email,
-                password: password
-            })
-        });
-
-        if (response.ok) {
-            // Redirection vers la page d'accueil
-            window.location.href = '/accueil.html';
-        } else {
-            alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
-        }
-    } catch (error) {
-        console.error('Une erreur s\'est produite lors de la tentative de connexion :', error);
-        alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
-    }
-}
-
 
 async function getWorks() {
     try {
@@ -115,7 +90,6 @@ async function getCategories() {
     const email = document.querySelector('.contact input').value;
     const password = document.querySelector('.password input').value;
     
-  
     login(email, password);
 });
    
@@ -137,7 +111,7 @@ async function getCategories() {
     
           
             if (response.ok) {
-                // Redirection vers la page d'accueil
+                localStorage.setItem('token', "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MTg3NDkzOSwiZXhwIjoxNjUxOTYxMzM5fQ.JGN1p8YIfR-M-5eQ-Ypy6Ima5cKA4VbfL2xMr2MgHm4")
                 window.location.href = 'file:///Users/arno/Desktop/SB_architecte/Portfolio-architecte-sophie-bluel/FrontEnd/index.html#';
             } else {
                 alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
@@ -147,11 +121,11 @@ async function getCategories() {
             alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
         }
     }
+
     
     
     
-    
-    }
+}
 
 
 

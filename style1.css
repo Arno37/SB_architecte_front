@@ -203,6 +203,20 @@ li.forgottenpw {
   justify-self: center;
 }
 
+.forgottenpw {
+  text-align: center; 
+  text-decoration: underline;
+  display: block;
+}
+
+.forgottenpw button {
+  border: none; /* Supprimer la bordure par défaut du bouton */
+  background-color: transparent; /* Rendre l'arrière-plan transparent */
+  color: inherit; /* Utiliser la couleur du texte par défaut */
+  text-decoration: underline; /* Ajouter un soulignement */
+  cursor: pointer; /* Changer le curseur au survol */
+}
+
 .whitecolor {
   background-color: white;
 }
@@ -238,5 +252,10 @@ li.forgottenpw {
   padding: 0;
   cursor: pointer;
   color: white;
-  font-family: 'Syne'; /* Changer la couleur du texte */
+  font-family: 'Syne'; 
+}
+
+ul li a {
+  text-decoration: none; 
+  color: #000; 
 }
