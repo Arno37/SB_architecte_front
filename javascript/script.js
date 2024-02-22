@@ -1,3 +1,29 @@
+async function login(email, password) {
+    try {
+        const response = await fetch('http://localhost:5678/api/users/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                email: email,
+                password: password
+            })
+        });
+
+        if (response.ok) {
+            // Redirection vers la page d'accueil
+            window.location.href = '/accueil.html';
+        } else {
+            alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
+        }
+    } catch (error) {
+        console.error('Une erreur s\'est produite lors de la tentative de connexion :', error);
+        alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
+    }
+}
+
+
 async function getWorks() {
     try {
         const response = await fetch('http://localhost:5678/api/works/');
@@ -28,6 +54,8 @@ async function getWorks() {
         console.error('Une erreur s\'est produite :', error);
     }
 }
+
+
 
 function setfilter(categoryId){
     const gallery = document.querySelector('.gallery');
@@ -67,9 +95,6 @@ async function getCategories() {
         
         const dataCategories = await response.json();// Affiche la réponse dans la console
         
-        
-
-        
         for (const currentCategory of dataCategories) {
             
             const button = document.createElement('button');
@@ -77,19 +102,27 @@ async function getCategories() {
             button.addEventListener("click",()=>setfilter(currentCategory.id))
             
         filters.appendChild(button)
-
-
 }
 
+}      catch (error) {
 
-    } catch (error) {
         console.error('Une erreur s\'est produite :', error);
     }
+
+    const loginButton = document.querySelector('.connecting .invisible-button');
+    loginButton.addEventListener('click', () => {
    
-    async function loginUser(email, password) {
+    const email = document.querySelector('.contact input').value;
+    const password = document.querySelector('.password input').value;
+    
+  
+    login(email, password);
+});
+   
+    async function login(email, password) {
         try {
             
-            const response = await fetch('http://localhost:5678/api-docs/#/default/post_users_login', {
+            const response = await fetch('http://localhost:5678/api/users/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -104,43 +137,21 @@ async function getCategories() {
     
           
             if (response.ok) {
-           
-                const data = await response.json();
-                window.location.href = '/accueil.html';
-                
-                return data;
-            } else if (response.status === 401) {
-                
-                throw new Error('Email ou mot de passe incorrect.');
-            } else if (response.status === 404) {
-                
-                throw new Error('Utilisateur non trouvé.');
+                // Redirection vers la page d'accueil
+                window.location.href = 'file:///Users/arno/Desktop/SB_architecte/Portfolio-architecte-sophie-bluel/FrontEnd/index.html#';
             } else {
-               
-                throw new Error('Erreur inattendue.');
+                alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
             }
         } catch (error) {
-            
-            console.error('Une erreur s\'est produite lors de la connexion :', error);
-           
-            return null;
+            console.error('Une erreur s\'est produite lors de la tentative de connexion :', error);
+            alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
         }
     }
     
     
-    /*loginUser('exemple@email.com', 'motdepasse')
-        .then(data => {
-            
-            if (data) {
-                console.log('Utilisateur connecté avec succès:', data);
-                
-            } else {
-                console.log('Échec de la connexion.');
-               
-            }
-        });*/
     
-}
+    
+    }
 
 
 
@@ -151,4 +162,3 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 })
-
