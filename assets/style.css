@@ -107,6 +107,7 @@ section {
 }
 body {
   line-height: 1;
+  
 }
 ol,
 ul {
@@ -137,7 +138,9 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  margin: 50px 0;
+  margin: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 section {
   margin: 50px 0;
@@ -242,38 +245,54 @@ li:hover {
 	color: #fff;
 }
 
-#contact {
+#contact, #login {
   width: 50%;
   margin: auto;
 }
-#contact > * {
+
+#contact > *, #login > * {
   text-align: center;
 }
-#contact h2 {
+#contact h2, #login h2 {
   margin-bottom: 20px;
+  margin-top: 120px;
 }
-#contact form {
+#contact form, #login form {
   text-align: left;
-  margin-top: 30px;
   display: flex;
   flex-direction: column;
 }
 
-#contact input {
+#contact input, #login input  {
   height: 50px;
   font-size: 1.2em;
   border: none;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 60%;
 }
-#contact label {
+#contact label, #login label {
   margin: 2em 0 1em 0;
+  width: 60%;
 }
 #contact textarea {
   border: none;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  width: 60%;
 }
 
 input[type="submit"] {
+  font-family: "Syne";
+  font-weight: 700;
+  color: white;
+  background-color: #1d6154;
+  margin: 2em auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px;
+}
+
+
+button[type="submit"] {
   font-family: "Syne";
   font-weight: 700;
   color: white;
@@ -288,4 +307,215 @@ footer nav ul {
   display: flex;
   justify-content: flex-end;
   margin: 2em;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: white;
+}
+
+
+.modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#openModalButton {
+  display: none;
+}
+
+header nav ul li a {
+  color: black; 
+  text-decoration: none; 
+}
+
+footer nav ul li a {
+  color: black; /* Définir la couleur du texte en noir */
+  text-decoration: none; /* Supprimer le soulignement */
+    font-family: Work Sans;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 16px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+#password {
+  color: black; /* Définir la couleur du texte en noir */
+}
+
+.forgottenpw{
+  display: flex;
+  justify-content: center;
+  color: black;
+    text-decoration: underline; /* Ajouter un soulignement */
+    bottom: -2px; 
+   
+  }
+
+
+#login button {
+  border-radius: 30px;
+  height: 33px;
+  width: 180px;
+  align-self: center;
+  color: white;
+  background-color: #1D6154;
+  border: none; 
+  cursor: pointer; 
+  margin-top: 30px;
+  margin-bottom: 25px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  background-color: #ffffff; /* Ajoutez une couleur de fond si nécessaire */;
+  width: 100%;
+  
+}
+
+footer nav ul li.mentions {
+  float: right;
+  margin-right: 50px;
+}
+
+.main{
+  margin: 150px;
+}
+
+.login-button {
+  font-family: 'Syne', sans-serif; /* Changer le style de police */
+  font-weight: lighter;
+}
+
+.rectangle {
+  width: 60%; /* Réduire la largeur des rectangles */
+}
+
+label {
+  display: block; /* Afficher chaque étiquette sur une ligne séparée */
+}
+
+form{
+  display: flex;
+    align-items: center;
+}
+
+.edit-mode {
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-top:15px;
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  Height:40px;
+}
+
+.editor-body{
+  margin: 92px;
+  background: #FFFEF8;
+}
+
+.edit-mode {
+  width: 100%; /* Définissez la largeur de l'image selon vos besoins */
+  
+}
+
+.nav-list {
+  gap: 20px;
+}
+
+.modify-img{
+  padding-left: 20px;
+  padding-top: 100px;
+}
+
+
+.editor{
+  padding: 1px;
+  
+}
+
+.projects{
+  margin-left: 65px;
+}
+
+.story_1{
+  width: 378px;
+}
+.story_2{
+  width: 411px;
+}
+.story_3{
+  width: 413px;
+}
+
+.gallery_edit{
+  padding-top: 50px;
+}
+
+.gallery{
+  padding-top: 45px;
+}
+
+.contact-section{
+  font-size: 18px;
+}
+ .contact-label{
+  width: 80%;
+ }
+
+ .input-group {
+  display: contents;
+
+}
+
+.project-info{
+  font-size: 17px;
+}
+
+input#email{
+  width: 70%;
+}
+
+input#name{
+  width: 70%;
+}
+
+textarea#message{
+  width: 70%;
+}
+#input-group .send-button{
+  width: 20%;
+  }
+
+  label[for="name"] {
+    width: 70%;
 }

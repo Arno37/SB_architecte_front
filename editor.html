@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+	<title>Sophie Bluel - Architecte d'intérieur</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Work+Sans&display=swap" rel="stylesheet">
+	<meta name="description" content="">
+	<link rel="stylesheet" href="./assets/style.css">
+	<script src="javascript/works.js" defer></script>
+	<script src="javascript/script.js" defer></script>
+	
+</head>
+<body class="editor-body">
+    <img src="./assets/Frame 20.svg" class="edit-mode" id="editModeButton">
+<header class="bloc">
+	<h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
+	<nav>
+        <ul class="nav-list">
+          <li>projets</li>
+          <li>contact</li>
+          <li><a href="login.html">login</a></li>
+          <li><img src="./assets/icons/Vector.png" alt="Instagram"></li>
+        </ul>
+      </nav>
+</header>
+<main class="editor">
+	<section id="introduction">
+		<figure>
+			<img src="./assets/images/sophie-bluel.png" alt="">
+		</figure>
+		<article>
+			<h2>Designer d'espace</h2>
+            <div class="story">
+			<div class="story_1"><p>Je raconte votre histoire, je valorise vos idées. Je vous accompagne de la conception à la livraison finale du chantier.</p></div><br>
+			<div class="story_2"><p>Chaque projet sera étudié en commun, de façon à mettre en valeur les volumes, les matières et les couleurs dans le respect de l’esprit des lieux et le choix adapté des matériaux. Le suivi du chantier sera assuré dans le souci du détail, le respect du planning et du budget.</p></div><br>
+            <div class="story_3"><p>En cas de besoin, une équipe pluridisciplinaire constituée de : architecte DPLG, décorateur(trice).</p></div><br>
+            </div>
+		</article>
+	</section>
+	<section id="portfolio">
+        <div class="projects">
+		<h2>Mes projets<img src="./assets/icons/Group 6.svg" alt="modify" class="modify-img"></h2>
+		
+        <section id="gallery">
+        
+    </section>
+
+
+	<section id="contact">
+        <h2>Contact</h2>
+        <p class="project-info">Vous avez un projet ? Discutons-en !</p>
+        <form action="#" method="post">
+            <div class="input-group">
+                <label for="name" class="contact-label">Nom</label>
+<input type="text" name="name" id="name" class="contact-input">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="input-group">
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+            </div>
+            <input type="submit" value="Envoyer" class="send-button">
+        </form>
+    </section>
+</main>
+
+<footer>
+	<nav>
+		<ul class="box">
+			<li>Mentions Légales</li>
+		</ul>
+	</nav>
+</footer>
+<div class="modal"id="modalContainer"></div>
+</body>
+</html>

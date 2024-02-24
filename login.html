@@ -11,10 +11,12 @@
       rel="stylesheet"
     />
     <meta name="description" content="" />
-    <link rel="stylesheet" href="./style1.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
+    <script src="javascript/login.js" defer></script>
     <script src="javascript/script.js" defer></script>
+    
   </head>
-  <body>
+  <body style="background-color: #FFFEF8;">
     <header>
       <h1>Sophie Bluel <span>Architecte d'intérieur</span></h1>
       <nav>
@@ -24,29 +26,31 @@
           <li class="bold"><a href="lien_vers_login_page">login</a></li>
           <li class="insta">
             <a href="link_to_instagram_account">
-              <img src="./assets/icons/icons8-instagram 1.png" alt="Instagram" />
+              <img src="./assets/icons/Vector.png" alt="Instagram">
             </a>
           </li>
         </ul>
       </nav>
     </header>
     <main>
-      <h1 class="green">Log In</h1>
-      <nav>
-          <ul class="board"> 
-              <li class="contact">E-mail
-                  <input class="rectangle" type="text" value=""></div>
-              </li>
-              <li class="password">Mot de passe
-                  <input class="rectangle" type="text" value=""></div>
-              </li>
-              <li class="connecting">
-                <button class="invisible-button">Se connecter</button>
-            </li>
-              <li><a href="link_to_forgotten_password" class="forgottenpw">Mot de passe oublié
-              </li>
-          </ul>
-      </nav>
+
+      <section id="login">
+      <h2 class="green">Log In</h2>
+        <form action="" method="get">
+          <label for="email-input">E-mail</label>
+          <input type="email" class="rectangle" id="email" name="email-input" value="sophie.bluel@test.tld">
+      
+          <label for="password-input">Mot de passe</label>
+          <input class="rectangle" type="password" id="password" name="password-input"value="S0phie">
+    
+          <button type="button" class="login-button">Se connecter</button>
+        </form>
+      </section>
+
+
+
+      <a href="link_to_forgotten_password" class="forgottenpw">Mot de passe oublié
+
     </main>
     <footer>
       <nav>

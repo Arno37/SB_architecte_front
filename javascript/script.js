@@ -1,137 +1,72 @@
 
-async function getWorks() {
-    try {
-        const response = await fetch('http://localhost:5678/api/works/');
-        
-        const dataWorks = await response.json();
-        
-        const gallery = document.querySelector('.gallery');
-        
-        
-        for (const currentWork of dataWorks) {
-            const figure = document.createElement('figure');
-            figure.dataset.category=currentWork.categoryId
-           
-            const image = document.createElement('img');
-            image.src = currentWork.imageUrl
-            image.alt = currentWork.title
-
-            const caption = document.createElement('figcaption');
-            caption.textContent = currentWork.title
-
-            figure.appendChild(image);
-            figure.appendChild(caption);
-
-            gallery.appendChild(figure); 
-        } 
-        
-    } catch (error) {
-        console.error('Une erreur s\'est produite :', error);
-    }
-}
-
-
-
-function setfilter(categoryId){
-    const gallery = document.querySelector('.gallery');
-    const figures= gallery.querySelectorAll('figure')
-    console.log('boutonclique ' , categoryId)
-
-    for  (const figure of figures) {
-        console.log(figure.dataset.category)
-
-        if(figure.dataset.category == categoryId){
-            figure.style.display='block'
-        }
-        else if (categoryId == 0){
-            figure.style.display='block'
-        }
-        else {
-            figure.style.display='none'
-        }
-    }
+document.addEventListener("DOMContentLoaded", function() {
     
+    var loginButton = document.querySelector(".login-button");
+  
+    loginButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
 
-
-
-}
-
-
-async function getCategories() {
-    try {
-        const filters = document.querySelector('.filters');
-        const button = document.createElement('button');
-        button.textContent = 'Tous';
-        button.addEventListener("click",()=>setfilter(0))
-        filters.appendChild(button)
-
-
-        const response = await fetch('http://localhost:5678/api/categories/');
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+  
+     
+      if (email === "sophie.bluel@test.tld" && password === "S0phie") {
         
-        const dataCategories = await response.json();// Affiche la réponse dans la console
+        window.location.href = "editor.html";
+      } else {
         
-        for (const currentCategory of dataCategories) {
-            
-            const button = document.createElement('button');
-            button.textContent = currentCategory.name;
-            button.addEventListener("click",()=>setfilter(currentCategory.id))
-            
-        filters.appendChild(button)
+        alert("La combinaison e-mail/mot de passe est incorrecte. Veuillez réessayer.");
+      }
+    });
+  });
+/* 
+
+function createModal() {
+
+    const modal = document.createElement('div');
+    modal.id = 'modal';
+    modal.classList.add('modal');
+    modal.innerHTML = `
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Titre de la Modale</h2>
+            <p>Contenu de la Modale...</p>
+        </div>
+    `;
+
+
+    const modalContainer = document.getElementById('modalContainer');
+    modalContainer.appendChild(modal);
 }
 
-}      catch (error) {
+function openModal() {
 
-        console.error('Une erreur s\'est produite :', error);
-    }
+    createModal();
+    const modal = document.getElementById('modal');
 
-    const loginButton = document.querySelector('.connecting .invisible-button');
-    loginButton.addEventListener('click', () => {
-   
-    const email = document.querySelector('.contact input').value;
-    const password = document.querySelector('.password input').value;
-    
-    login(email, password);
-});
-   
-    async function login(email, password) {
-        try {
-            
-            const response = await fetch('http://localhost:5678/api/users/login', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                    
-                },
-                body: JSON.stringify({
-                    email: email,
-                    password: password
-                })
-                
-            });
-    
-          
-            if (response.ok) {
-                const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImlhdCI6MTY1MTg3NDkzOSwiZXhwIjoxNjUxOTYxMzM5fQ.JGN1p8YIfR-M-5eQ-Ypy6Ima5cKA4VbfL2xMr2MgHm4'; 
-                localStorage.setItem('token', token)
-                window.location.href = 'file:///Users/arno/Desktop/SB_architecte/Portfolio-architecte-sophie-bluel/FrontEnd/index.html#';
+    modal.style.display = 'block';
+}
 
-            } else {
-                alert('La combinaison email/mot de passe est incorrecte. Veuillez réessayer.');
-            }
+function closeModal() {
 
-        } catch (error) {
-            console.error('Une erreur s\'est produite lors de la tentative de connexion :', error);
-            alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
-        }
-    }
+    const modal = document.getElementById('modal');
+    modal.style.display = 'none';
 }
 
 
+const openModalButton = document.getElementById('openModalButton');
+openModalButton.addEventListener('click', openModal);
 
-// Appel de la fonction fetchData dès que le document est chargé
+
+const closeModalButton = document.getElementById('closeModalButton');
+closeModalButton.addEventListener('click', closeModal);
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    getWorks();
-    getCategories();
-
-
-})
+    document.body.addEventListener('click', function (event) {
+        if (event.target === document.body) {
+            openModal();
+        }
+    });
+}); */
