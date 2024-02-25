@@ -207,7 +207,7 @@ li:hover {
 }
 #portfolio h2 {
   text-align: center;
-  margin-bottom: 1em;
+  margin-bottom: 1.8em;
   padding-top: 100px;
 }
 .gallery {
@@ -276,7 +276,7 @@ li:hover {
   font-size: 1.2em;
   border: none;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-  width: 60%;
+  width: 70%;
 }
 #contact label,
 #login label {
@@ -417,6 +417,14 @@ footer nav ul li.mentions {
   width: 60%; /* Réduire la largeur des rectangles */
 }
 
+#email.rectangle {
+  width: 60%;
+}
+
+#password.rectangle {
+  width: 60%;
+}
+
 label {
   display: block; /* Afficher chaque étiquette sur une ligne séparée */
 }
@@ -486,8 +494,8 @@ div.title-project button {
   padding-top: 50px;
 }
 
-.gallery {
-  padding-top: 45px;
+#gallery1 {
+  padding-top: 50px;
 }
 
 .contact-section {
@@ -505,19 +513,12 @@ div.title-project button {
   font-size: 17px;
 }
 
-input#email {
-  width: 70%;
-}
-
 input#name {
   width: 70%;
 }
 
 textarea#message {
   width: 70%;
-}
-#input-group .send-button {
-  width: 20%;
 }
 
 label[for="name"] {
@@ -532,9 +533,6 @@ label#name {
   width: 70%;
 }
 
-#input .send-button {
-  width: 100%;
-}
 #label.contact-label {
   width: 100%;
 }
@@ -547,4 +545,36 @@ label#name {
 nav ul {
   padding-top: none;
   gap: 20px;
+}
+
+#contact .send {
+  width: 40%;
+}
+#contact label.contact-label {
+  width: 70%;
+  margin: 2em 0 0.4em 0;
+}
+
+#contact label.email {
+  width: 70%;
+  margin: 2em 0 0.4em 0;
+}
+
+#contact label.message {
+  width: 70%;
+  margin: 2em 0 0.1em 0;
+}
+
+.txt p {
+  padding-top: 3px;
+}
+
+#contact h2.contact {
+  margin: 0;
+  padding-top: 72px;
+  padding-bottom: 17px;
+}
+
+#contact figcaption.gallery {
+  padding-top: 5px;
 }
