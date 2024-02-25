@@ -30,3 +30,24 @@ async function login(form) {
         alert('Une erreur s\'est produite lors de la tentative de connexion. Veuillez réessayer plus tard.');
     }
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+    
+    var loginButton = document.querySelector(".login-button");
+  
+    loginButton.addEventListener("click", function(event) {
+      event.preventDefault(); 
+
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+  
+     
+      if (email === "sophie.bluel@test.tld" && password === "S0phie") {
+        
+        window.location.href = "editor.html";
+      } else {
+        
+        alert("La combinaison e-mail/mot de passe est incorrecte. Veuillez réessayer.");
+      }
+    });
+  })

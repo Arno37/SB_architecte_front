@@ -17,7 +17,9 @@
 </head>
 
 <body class="editor-body">
-    <img src="./assets/Frame 20.svg" class="edit-mode" id="editModeButton">
+    <div class="edit-mode">
+        <img src="./assets/Frame 20.svg" class="pic" id="editModeButton">
+    </div>
     <header class="bloc">
         <h1>Sophie Bluel <span>ARCHITECTE D'INTÉRIEUR</span></h1>
         <nav>
@@ -58,37 +60,44 @@
             <div class="projects">
                 <div class="title-project">
                     <h2>Mes projets</h2>
-                    <button>
-                        <img src="./assets/icons/Group.png" alt="modify" class="modify-img">
-                        <div class="txt">
+                    <div class="button">
+                        <button id="button">
+                            <img src="./assets/icons/Group.png" alt="modify" class="modify-img">
                             <p>modifier</p>
-                        </div>
-
-                    </button>
+                        </button>
+                    </div>
                 </div>
+            </div>
+            <div id="modalContainer" class="modal">
+                <div class="modal-content">
+                    <span id="openModalButton" class="open">&times;</span>
+                    <span id="closeModalButton" class="close">&times;</span>
 
-                <div class="gallery" id="gallery1"></div>
+                </div>
+            </div>
+
+            <div class="gallery" id="gallery1"></div>
 
 
-                <section id="contact">
-                    <h2 class="contact">Contact</h2>
-                    <p class="project-info">Vous avez un projet ? Discutons-en !</p>
-                    <form action="#" method="post">
-                        <div class="input-group">
-                            <label for="name" class="contact-label">Nom</label>
-                            <input type="text" name="name" id="name" class="contact-input">
-                        </div>
-                        <div class="input-group">
-                            <label for="email" class="email">E-mail</label>
-                            <input type="email" name="email" id="email">
-                        </div>
-                        <div class="input-group">
-                            <label for="message" class="message">Message</label>
-                            <textarea name="message" id="message"></textarea>
-                        </div>
-                        <input type="submit" value="Envoyer" class="send">
-                    </form>
-                </section>
+            <section id="contact">
+                <h2 class="contact">Contact</h2>
+                <p class="project-info">Vous avez un projet ? Discutons-en !</p>
+                <form action="#" method="post">
+                    <div class="input-group">
+                        <label for="name" class="contact-label">Nom</label>
+                        <input type="text" name="name" id="name" class="contact-input">
+                    </div>
+                    <div class="input-group">
+                        <label for="email" class="email">E-mail</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                    <div class="input-group">
+                        <label for="message" class="message">Message</label>
+                        <textarea name="message" id="message"></textarea>
+                    </div>
+                    <input type="submit" value="Envoyer" class="send">
+                </form>
+            </section>
     </main>
 
     <footer>
@@ -98,7 +107,6 @@
             </ul>
         </nav>
     </footer>
-    <div class="modal" id="modalContainer"></div>
 </body>
 
 </html>
