@@ -503,12 +503,7 @@ label#name {
 #label.contact-label {
   width: 100%;
 }
-.projects .title-project button {
-  border: none; /* Supprime les contours */
-  background-color: transparent; /* Supprime le fond gris */
-  padding-left: 35px; /* Supprime le rembourrage */
-  display: flex;
-}
+
 nav ul {
   padding-top: none;
   gap: 20px;
@@ -532,19 +527,7 @@ nav ul {
   margin: 2em 0 0.1em 0;
 }
 
-.openModalButton p {
-  padding-top: 3px;
-}
-
-#contact h2.contact {
-  margin: 0;
-  padding-top: 72px;
-  padding-bottom: 17px;
-}
-
-#contact figcaption.gallery {
-  padding-top: 5px;
-}
+/* A REGARDER DAM */
 #openModalButton {
   border: none; /* Supprime les contours */
   background-color: transparent; /* Supprime le fond gris */
