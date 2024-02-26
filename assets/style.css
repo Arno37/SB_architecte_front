@@ -133,6 +133,7 @@ body {
   margin: auto;
   font-family: "Work Sans";
   font-size: 14px;
+  background: #fffef8;
 }
 header {
   display: flex;
@@ -142,7 +143,7 @@ header {
   margin-right: 20px;
 }
 section {
-  margin: 50px 0;
+  margin: 50px -2px;
 }
 
 h1 {
@@ -184,7 +185,7 @@ li:hover {
   display: flex;
   align-items: center;
   margin-left: 55px;
-  padding-top: 50px;
+  padding-top: 100px;
 }
 #introduction figure {
   flex: 1;
@@ -207,8 +208,8 @@ li:hover {
 }
 #portfolio h2 {
   text-align: center;
-  margin-bottom: 1.8em;
-  padding-top: 100px;
+  margin-bottom: 1.2em;
+  padding-top: 90px;
 }
 .gallery {
   width: 100%;
@@ -251,7 +252,7 @@ li:hover {
 #contact,
 #login {
   width: 50%;
-  margin: auto;
+  margin-left: 23%;
 }
 
 #contact > *,
@@ -260,8 +261,9 @@ li:hover {
 }
 #contact h2,
 #login h2 {
-  margin-bottom: 20px;
-  margin-top: 120px;
+  margin-bottom: 14px;
+  margin-top: 70px;
+  font-size: 37px;
 }
 #contact form,
 #login form {
@@ -272,7 +274,7 @@ li:hover {
 
 #contact input,
 #login input {
-  height: 50px;
+  height: 60px;
   font-size: 1.2em;
   border: none;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
@@ -280,8 +282,8 @@ li:hover {
 }
 #contact label,
 #login label {
-  margin: 2em 0 1em 0;
-  width: 60%;
+  margin: 2.9em 0 0.5em 0;
+  width: 70%;
 }
 #contact textarea {
   border: none;
@@ -342,7 +344,7 @@ footer nav ul li a {
   justify-content: center;
   color: black;
   text-decoration: underline; /* Ajouter un soulignement */
-  bottom: -2px;
+  padding-right: 40px;
 }
 
 #login button {
@@ -431,16 +433,16 @@ form {
 div.title-project {
   display: flex;
   justify-content: center;
-  width: 112%;
+  padding-left: 108px;
 }
 
 div.title-project button {
-  margin-top: 8em;
+  margin-top: 7.3em;
   gap: 10px;
 }
 
 .editor {
-  padding: 1px;
+  padding: 0.5px;
 }
 
 .projects {
@@ -486,6 +488,7 @@ input#name {
 
 textarea#message {
   width: 70%;
+  height: 185px;
 }
 
 label[for="name"] {
@@ -599,6 +602,25 @@ nav ul {
   line-height: 30px;
 }
 
-#gallery1 figcaption {
-  padding: 8px;
+figcaption {
+  padding-top: 7px;
+}
+
+#contact p {
+  font-size: 18px;
+}
+
+#contact input[type="submit"] {
+  width: 200px;
+  height: 45px;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+#login label[for="email-input"] {
+  width: 60%;
+}
+
+#login label[for="password-input"] {
+  width: 60%;
 }
