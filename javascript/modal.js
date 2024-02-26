@@ -6,9 +6,11 @@ const galleryTitle = document.getElementById('galleryTitle');
 button.addEventListener('click', function() {
     console.log('Le bouton a été cliqué !');
     openModal();
+
 });
 
-closeModalButton.addEventListener('click', function() {
+button.addEventListener('click', function() {
+    console.log('Le bouton a été cliqué !');
     closeModal();
 });
 
@@ -21,3 +23,4 @@ function closeModal() {
     modal.style.display = 'none';
     galleryTitle.style.display = 'none'; 
 }
+

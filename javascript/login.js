@@ -1,5 +1,3 @@
-
-
 async function login(form) {
     try {
         const email = form.email.value; 
@@ -33,7 +31,7 @@ async function login(form) {
 
 document.addEventListener("DOMContentLoaded", function() {
     
-    var loginButton = document.querySelector(".login-button");
+    const loginButton = document.querySelector(".login-button");
   
     loginButton.addEventListener("click", function(event) {
       event.preventDefault(); 

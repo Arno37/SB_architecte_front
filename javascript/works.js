@@ -5,9 +5,10 @@ async function getWorks() {
         const dataWorks = await response.json();
 
         const gallery = document.querySelector('.gallery');
+        console.log("gallery",gallery);
 
 
-        for (const currentWork of dataWorks) {
+      for (const currentWork of dataWorks) {
             const figure = document.createElement('figure');
             figure.dataset.category = currentWork.categoryId
 
@@ -20,7 +21,6 @@ async function getWorks() {
 
             figure.appendChild(image);
             figure.appendChild(caption);
-
             gallery.appendChild(figure);
         }
 
