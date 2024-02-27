@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="javascript/works.js" defer></script>
     <script src="javascript/modal.js" defer></script>
+    <script src="javascript/delete.js" defer></script>
+    <script src="javascript/get_projects" defer></script>
 
 </head>
 
@@ -69,7 +71,6 @@
                 </div>
             </div>
 
-
             <div class="gallery" id="gallery1"></div>
 
 
@@ -92,14 +93,21 @@
                     <input type="submit" value="Envoyer" class="send">
                 </form>
             </section>
-    </main>
 
+            <section id="works-list">
+                <div class="work" id="work-1" data-work-id="1">
+                    <button class="delete-work-button" data-work-id="1">Supprimer</button>
+                </div>
+            </section>
+    </main>
 
     <div id="modalContainer" class="modal">
         <div class="modal-content">
             <span id="closeModalButton" class="close">&times;</span>
             <div id="modal-main-content">
                 <h3>Galerie Photo</h3>
+                <button id="addPhotoButton">Ajouter une photo</button>
+                <div id="previewContainer"></div>
             </div>
         </div>
     </div>

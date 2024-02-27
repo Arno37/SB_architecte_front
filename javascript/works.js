@@ -5,7 +5,7 @@ async function getWorks() {
         const dataWorks = await response.json();
 
         const gallery = document.querySelector('.gallery');
-        console.log("gallery",gallery);
+      
 
 
       for (const currentWork of dataWorks) {

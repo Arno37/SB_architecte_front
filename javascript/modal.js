@@ -1,14 +1,7 @@
-const openModalButton = document.getElementById('openModalButton');
-openModalButton.addEventListener('click', function() {
-    
-    console.log('Le bouton a été cliqué !');
-});
-
 function openModal() {
-    
     const modal = document.getElementById('modalContainer');
     modal.style.display = 'flex';
-    //
+
 }
 
 function closeModal() {
@@ -16,8 +9,15 @@ function closeModal() {
     modal.style.display = 'none';
 }
 
+const openModalButton = document.getElementById('openModalButton');
+openModalButton.addEventListener('click', function() {
+    
+    console.log('Le bouton a été cliqué !');
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
-    // DAM
+    
     const openModalButton = document.getElementById('openModalButton');
     openModalButton.addEventListener('click', openModal);
 
