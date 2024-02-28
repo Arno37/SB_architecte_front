@@ -575,6 +575,9 @@ nav ul {
   min-height: 400px;
   width: 30%;
   padding: 30px;
+
+  display: flex;
+  flex-direction: column;
 }
 
 .modal-content .close {
@@ -586,10 +589,12 @@ nav ul {
   font-weight: 700;
 }
 
+/* DAM */
 #modal-main-content {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
 }
 
 #modal-main-content h3 {
@@ -597,6 +602,40 @@ nav ul {
   font-weight: 400;
   text-align: center;
   line-height: 30px;
+  /* DAM */
+  margin-bottom: 30px;
+}
+
+/* DAM */
+#modal-main-content #previewContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  row-gap: 25px;
+}
+
+/* DAM */
+#modal-main-content #previewContainer img {
+  width: 76px;
+  height: auto;
+}
+
+/* DAM */
+#modal-main-content hr {
+  width: 100%;
+  border: 1px solid #b3b3b3;
+  margin: 50px 0;
+}
+
+/* DAM */
+#modal-main-content button.add-photo-button {
+  background-color: #1d6154;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 60px;
+  width: 50%;
+  cursor: pointer;
 }
 
 figcaption {
@@ -621,15 +660,7 @@ figcaption {
   width: 60%;
 }
 
-#addPhotoButton {
-  position: absolute;
-  bottom: 20px; /* Ajustez cette valeur selon vos besoins */
-  left: 50%;
-  transform: translateX(-50%);
-  background-color: #1d6154;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
+.photo-button .trash{
+  width: 20%;
+  height: 50px;
 }
