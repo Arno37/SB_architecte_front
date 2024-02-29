@@ -656,14 +656,12 @@ nav ul {
   margin: 50px 0;
 }
 
-/* DAM */
 #modal-main-content button.add-photo-button {
   background-color: #1d6154;
   color: white;
   padding: 10px 20px;
   border: none;
   border-radius: 60px;
-  width: 50%;
   cursor: pointer;
 }
 

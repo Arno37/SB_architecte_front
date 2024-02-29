@@ -1,12 +1,12 @@
 async function getWorks() {
     try {
         const response = await fetch('http://localhost:5678/api/works/');
-        
+       
 
         const dataWorks = await response.json();
         
         const gallery = document.querySelector('.gallery');
-        console.log(gallery)
+       
         
         
       
@@ -39,9 +39,10 @@ async function getWorks() {
 function setfilter(categoryId) {
     const gallery = document.querySelector('.gallery');
     const figures = gallery.querySelectorAll('figure')
+    
 
     for (const figure of figures) {
-        console.log(figure.dataset.category)
+        
 
         if (figure.dataset.category == categoryId) {
             figure.style.display = 'block'
@@ -59,6 +60,7 @@ function setfilter(categoryId) {
 async function getCategories() {
     try {
         const filters = document.querySelector('.filters');
+        
         const button = document.createElement('button');
         button.textContent = 'Tous';
         button.addEventListener("click", () => setfilter(0))
@@ -66,6 +68,7 @@ async function getCategories() {
 
 
         const response = await fetch('http://localhost:5678/api/categories/');
+        
 
         const dataCategories = await response.json();// Affiche la réponse dans la console
 

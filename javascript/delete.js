@@ -1,54 +1,39 @@
 
 
-// async function deleteWork(workId) {
-//     try {
+async function deleteprojects(deleteid) {
+    try {
         
-//         const response = await fetch(`http://localhost:5678/api/works/${workId}`, {
-//             method: 'DELETE'
-//         });
+        const response = await fetch(`http://localhost:5678/api/works/${id}`, {
+            method: 'DELETE'
+        });
 
        
-//         if (response.ok) {
+        if (response.ok) {
             
-//             const workElement = document.getElementById(`work-${workId}`);
+            const workElement = document.getElementById(`work/${id}`);
             
-//             if (workElement) {
-//                 workElement.remove();
-//             } else {
-//                 console.error(`Le travail avec l'identifiant ${workId} n'a pas été trouvé dans le DOM.`);
-//             }
-//         } else {
+        } else {
             
-//             console.error('La suppression du travail a échoué.');
-//         }
-//     } catch (error) {
-//         console.error('Une erreur s\'est produite lors de la suppression du travail :', error);
+            console.error('La suppression du travail a échoué.');
+        }
+    } catch (error) {
+        console.error('Une erreur s\'est produite lors de la suppression du travail :', error);
         
-//         alert('Une erreur s\'est produite lors de la suppression du travail. Veuillez réessayer plus tard.');
-//     }
-// }
+        alert('Une erreur s\'est produite lors de la suppression du travail. Veuillez réessayer plus tard.');
+    }
+}
 
-// document.addEventListener('DOMContentLoaded', function() {
+
+const deletebutton = document.getElementById('trash_button')
+deletebutton.addEventListener('click', function() {
     
-//     const deleteButtons = document.querySelectorAll('.delete-work-button');
-
-   
-//     deleteButtons.forEach(function(button) {
-        
-//         button.addEventListener('click', function(event) {
-//             event.preventDefault();
-
-           
-//             const workId = button.getAttribute('data-work-id');
-//             deleteWork(workId);
-//         });
-//     });
-// });
-
-const photoContainer = document.getElementById('photo-container');
-
-const trashicon = document.getElementById('trash_icon')
-
-const trashpicture = document.getElementById('trash_picture')
+    console.log('Le bouton a été cliqué !');
+});
 
 
+document.addEventListener('DOMContentLoaded', () => {
+    
+    const deletetrash = document.getElementById('trash_picture');
+    deletetrash.addEventListener('click', deleteprojects);
+
+});

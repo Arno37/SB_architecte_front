@@ -15,6 +15,7 @@
     <script src="javascript/modal.js" defer></script>
     <script src="javascript/delete.js" defer></script>
     <script src="javascript/get_projects.js" defer></script>
+    <script src="javascript/add_project_BE.js" defer></script>
 
 </head>
 
@@ -104,32 +105,35 @@
                 <!--DAM -->
                 <div id="previewContainer">
                     <div class="photo-container">
-                        <!--  A TOI DE REPRODUIRE L EXEMPLE EN JS AVEC LA MEME STRUCTURE -->
                         <div class="photo" id="photoContainer">
                             <button class="trash-button" id="trash_button">
-                                <img src="assets/icons/trash.svg" class="trash" alt="trash_img" id="trash_picture">
+                                <img src="assets/icons/trash.svg" class="trash" alt="supprimer" id="trash_picture">
                             </button>
                             <img src="http://localhost:5678/images/abajour-tahina1651286843956.png">
-                            
+
                         </div>
 
                     </div>
                 </div>
-                <!--DAM -->
-                <hr>
-                <!--DAM -->
-                <button class="add-photo-button">Ajouter une photo</button>
-            </div>
-        </div>
-    </div>
 
-    <footer>
-        <nav>
-            <ul class="box">
-                <li>Mentions Légales</li>
-            </ul>
-        </nav>
-    </footer>
+                <hr>
+                <div class="upload">
+                    <input type="file" id="fileInput" style="display: none;">
+                    <button class="add-photo-button">Ajouter une photo</button>
+                </div>
+</body>
+
+</div>
+</div>
+</div>
+
+<footer>
+    <nav>
+        <ul class="box">
+            <li>Mentions Légales</li>
+        </ul>
+    </nav>
+</footer>
 </body>
 
 </html>
