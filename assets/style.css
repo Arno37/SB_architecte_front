@@ -620,6 +620,35 @@ nav ul {
   height: auto;
 }
 
+/* ---- DAM Button Trash */
+#modal-main-content #previewContainer div.photo {
+  position: relative;
+}
+
+/* ---- DAM Button Trash */
+#modal-main-content #previewContainer button.trash-button {
+  position: absolute;
+  cursor: pointer;
+  padding: 0;
+  background-color: #000000;
+  border: none;
+  border-radius: 2px;
+  right: 5px;
+  top: 5px;
+  height: 18px;
+  width: 18px;
+}
+/* ---- DAM Button Trash */
+#modal-main-content #previewContainer button.trash-button:hover {
+  background-color: #494949;
+}
+
+/* ---- DAM Button Trash */
+#modal-main-content #previewContainer button.trash-button img {
+  height: 10px;
+  width: 10px;
+}
+
 /* DAM */
 #modal-main-content hr {
   width: 100%;
@@ -658,9 +687,4 @@ figcaption {
 
 #login label[for="password-input"] {
   width: 60%;
-}
-
-.photo-button .trash{
-  width: 20%;
-  height: 50px;
 }

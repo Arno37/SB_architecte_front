@@ -1,15 +1,29 @@
-//DAM
+
 async function fetchPhotosFromAPI() {
+
 try{
     const response =  await fetch('http://localhost:5678/api/works/');
     const dataWorks = await response.json();
     const modalPreviewContainer = document.getElementById("previewContainer");
+    
+
+    const icon = document.getElementById('trash_button')
+    const picture = document.getElementById('trash_picture')
+   
+    
+    
 
     dataWorks.forEach(work => {
-        console.log(work)
+        
         const img = document.createElement("img");
         img.src = work.imageUrl; 
         modalPreviewContainer.appendChild(img);
+
+        const icon = document.createElement('icon')
+        trash_button.appendChild(icon)
+       
+        const picture = document.createElement('picture')
+        trash_picture.appendChild(picture);
     });
 
     }
@@ -22,8 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const openModalButton = document.getElementById("openModalButton");
     const closeModalButton = document.getElementById("closeModalButton");
 
-    //DAM
-    //default none on loaded dom
+   
     const modalContainer = document.getElementById("modalContainer");
     modalContainer.style.display = "none";
 

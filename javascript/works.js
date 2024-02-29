@@ -1,10 +1,14 @@
 async function getWorks() {
     try {
         const response = await fetch('http://localhost:5678/api/works/');
+        
 
         const dataWorks = await response.json();
-
+        
         const gallery = document.querySelector('.gallery');
+        console.log(gallery)
+        
+        
       
 
 
@@ -22,6 +26,7 @@ async function getWorks() {
             figure.appendChild(image);
             figure.appendChild(caption);
             gallery.appendChild(figure);
+
         }
 
     } catch (error) {
