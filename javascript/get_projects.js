@@ -1,3 +1,25 @@
+function deleteProjectFromApi(idWork) {
+    console.log(idWork)
+try{
+    const response = await fetch('http://localhost:5678/api/works/{id}',{
+        method: 'DELETE',
+        headers: {
+            'accept: */*'
+        }
+    }
+    
+}
+
+    // Le IdWork va contenir la valeur de l'id du projet à supprimer
+    // Faire le fetch sur l'url delete en envoyant l id - regardes le swagger
+  
+
+}
+
+
+
+
+
 
 async function fetchPhotosFromAPI() {
 try{
@@ -21,7 +43,16 @@ try{
         trashButton.className='trash-button'
         trashButton.id=work.id
         
-       
+        trashButton.addEventListener('click', function() {    
+            // ICI l utilisateur vient de cliquer sur le bouton (pas n importe quelle poubelle celui là précisément
+            // Le "this" te donne l'objet correspondant au bouton
+            // On a mis dans chaque bouton un id avec la valeur de l'id du Work
+            // Il suffit ici d'appeler la fonction delete Projects .... en envoyant l'id depuis ici...
+
+            // je te montre avec le this.id comment récupérer le id du bouton précisément cliqué
+            console.log('La poubelle est cliqué pour le projet ', this.id);
+        });
+            
 
         const trashImage =  document.createElement("img");
         trashImage.className='trash';
@@ -49,22 +80,8 @@ try{
     }
 }
 
-
-function deleteprojects() {
-    const projects = document.getElementById('photocontainer')
-
-}
-
-const deletebutton = document.getElementById('trash_button')
-deletebutton.addEventListener('click', function() {
-    
-    console.log('Le bouton a été cliqué !');
-});
-
+ 
 
 document.addEventListener('DOMContentLoaded', () => {
-    
-    const deletetrash = document.getElementById('trash_picture');
-    deletetrash.addEventListener('click', deleteproject);
-
+    fetchPhotosFromAPI()
 });
