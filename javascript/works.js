@@ -8,9 +8,6 @@ async function getWorks() {
         const gallery = document.querySelector('.gallery');
        
         
-        
-      
-
 
       for (const currentWork of dataWorks) {
             const figure = document.createElement('figure');
@@ -70,7 +67,7 @@ async function getCategories() {
         const response = await fetch('http://localhost:5678/api/categories/');
         
 
-        const dataCategories = await response.json();// Affiche la réponse dans la console
+        const dataCategories = await response.json();
 
         for (const currentCategory of dataCategories) {
 

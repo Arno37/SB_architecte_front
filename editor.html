@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="javascript/works.js" defer></script>
     <script src="javascript/modal.js" defer></script>
-    <script src="javascript/delete.js" defer></script>
+    <script src="javascript/trashdelete.js" defer></script>
     <script src="javascript/get_projects.js" defer></script>
     <script src="javascript/add_project_BE.js" defer></script>
 
@@ -102,18 +102,9 @@
             <span id="closeModalButton" class="close">&times;</span>
             <div id="modal-main-content">
                 <h3>Galerie Photo</h3>
-                <!--DAM -->
+
                 <div id="previewContainer">
-                    <div class="photo-container">
-                        <div class="photo" id="photoContainer">
-                            <button class="trash-button" id="trash_button">
-                                <img src="assets/icons/trash.svg" class="trash" alt="supprimer" id="trash_picture">
-                            </button>
-                            <img src="http://localhost:5678/images/abajour-tahina1651286843956.png">
-
-                        </div>
-
-                    </div>
+                    <div class="photo-container"></div>
                 </div>
 
                 <hr>
@@ -121,11 +112,11 @@
                     <input type="file" id="fileInput" style="display: none;">
                     <button class="add-photo-button">Ajouter une photo</button>
                 </div>
+            </div>
+        </div>
+    </div>
 </body>
 
-</div>
-</div>
-</div>
 
 <footer>
     <nav>
