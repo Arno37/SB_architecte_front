@@ -10,7 +10,7 @@ function closeModal() {
     
 }
 
-const openModalButton = document.getElementById('openModalButton');
+
 
 document.addEventListener('DOMContentLoaded', () => {
     

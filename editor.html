@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="./assets/style.css">
     <script src="javascript/works.js" defer></script>
     <script src="javascript/modal.js" defer></script>
-    <script src="javascript/trashdelete.js" defer></script>
+    <script src="javascript/addpic.js" defer></script>
     <script src="javascript/get_projects.js" defer></script>
-    <script src="javascript/add_project_BE.js" defer></script>
+
 
 </head>
 
@@ -114,7 +114,36 @@
                 </div>
             </div>
         </div>
+        <div id="nouvelle_div" class="nouvelle-div">
+            <h3>Ajout photo</h3>
+        </div>
+        <div id="newmodal">
+            <div id="modalpicture" class='picture'>
+                <img src="./assets/icons/Rectangle 21.svg" alt="add_pic" class="rectangle-img" style="display: none;">
+                <img src="./assets/icons/picture-svgrepo-com 1.svg" alt="new_pic" class="logo-pic"
+                    style="display: none;">
+                <div class="add-photo-container">
+                    <h4 class="add_pic" style="display: none;">+ Ajouter une photo</h4>
+                </div>
+                <p class="format" style="display: none;">jpg, png : 4mo max</p>
+            </div>
+            <section id="validate">
+                <div class="title">
+                    <label for="title-input">Titre</label>
+                    <input style="display: none;" type="title" class="rectangle" id="title" name="title-input" value="">
+                </div>
+                <div class="category">
+                    <label for="category-input">Catégorie</label>
+                    <input class="rectangle" type="category" id="category" name="category-input" value=""
+                        style="display: none;">
+                </div>
+                <button type="button" class="validate-button" style="display: none;">valider</button>
+                </form>
+            </section>
+        </div>
     </div>
+
+
 </body>
 
 

@@ -589,7 +589,6 @@ nav ul {
   font-weight: 700;
 }
 
-/* DAM */
 #modal-main-content {
   display: flex;
   flex-direction: column;
@@ -598,15 +597,13 @@ nav ul {
 }
 
 #modal-main-content h3 {
-  font-size: 26px;
-  font-weight: 400;
+  font-weight: 200;
   text-align: center;
   line-height: 30px;
-  /* DAM */
   margin-bottom: 30px;
+  font-size: 1.4em;
 }
 
-/* DAM */
 #modal-main-content #previewContainer {
   display: flex;
   flex-wrap: wrap;
@@ -614,18 +611,15 @@ nav ul {
   row-gap: 25px;
 }
 
-/* DAM */
 #modal-main-content #previewContainer img {
   width: 76px;
   height: auto;
 }
 
-/* ---- DAM Button Trash */
 #modal-main-content #previewContainer div.photo {
   position: relative;
 }
 
-/* ---- DAM Button Trash */
 #modal-main-content #previewContainer button.trash-button {
   position: absolute;
   cursor: pointer;
@@ -638,18 +632,16 @@ nav ul {
   height: 18px;
   width: 18px;
 }
-/* ---- DAM Button Trash */
+
 #modal-main-content #previewContainer button.trash-button:hover {
   background-color: #494949;
 }
 
-/* ---- DAM Button Trash */
 #modal-main-content #previewContainer button.trash-button img {
   height: 10px;
   width: 10px;
 }
 
-/* DAM */
 #modal-main-content hr {
   width: 100%;
   border: 1px solid #b3b3b3;
@@ -685,4 +677,51 @@ figcaption {
 
 #login label[for="password-input"] {
   width: 60%;
+}
+#newModal {
+  display: none;
+}
+
+img.logo-pic {
+  position: absolute;
+  margin-top: 70px;
+  width: 12%;
+}
+img.rectangle-img {
+  width: 85%;
+}
+
+#modal-main-content h4 {
+  position: absolute;
+  margin-top: 132px;
+  background-color: #b9c5cc;
+  height: 4.6%;
+  padding-top: 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+  color: steelblue;
+}
+
+#modal-main-content p {
+  font-size: 7px;
+  position: absolute;
+  margin-top: 171px;
+}
+
+h4.add_pic {
+  color: #fff;
+}
+
+#modal-main-content label {
+  display: flex;
+  align-self: flex-start;
+  margin-top: 27px;
+}
+
+.rectangle {
+  width: 83%;
+  height: 30px;
 }
