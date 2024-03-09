@@ -570,14 +570,13 @@ nav ul {
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
-  min-width: 300px;
-  max-width: 500px;
-  min-height: 400px;
-  width: 30%;
+  min-height: 417px;
+  width: 28%;
   padding: 30px;
 
   display: flex;
   flex-direction: column;
+  height: 64%;
 }
 
 .modal-content .close {
@@ -600,7 +599,7 @@ nav ul {
   font-weight: 200;
   text-align: center;
   line-height: 30px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
   font-size: 1.4em;
 }
 
@@ -645,13 +644,14 @@ nav ul {
 #modal-main-content hr {
   width: 100%;
   border: 1px solid #b3b3b3;
-  margin: 50px 0;
+  margin: 27px 0;
+  margin-top: 68px;
 }
 
 #modal-main-content button.add-photo-button {
   background-color: #1d6154;
   color: white;
-  padding: 10px 20px;
+  padding: 6px 40px;
   border: none;
   border-radius: 60px;
   cursor: pointer;
@@ -684,22 +684,24 @@ figcaption {
 
 img.logo-pic {
   position: absolute;
-  margin-top: 70px;
+  margin-top: 63px;
   width: 12%;
 }
 img.rectangle-img {
-  width: 85%;
+  width: 84%;
+  margin-bottom: -6px;
+  height: 33%;
 }
 
 #modal-main-content h4 {
   position: absolute;
-  margin-top: 132px;
+  margin-top: 122px;
   background-color: #b9c5cc;
-  height: 4.6%;
+  height: 3.7%;
   padding-top: 9px;
   border-radius: 20px;
   font-size: 10px;
-  width: 30%;
+  width: 27%;
   display: flex;
   justify-content: center;
   color: steelblue;
@@ -708,7 +710,7 @@ img.rectangle-img {
 #modal-main-content p {
   font-size: 7px;
   position: absolute;
-  margin-top: 171px;
+  margin-top: 155px;
 }
 
 h4.add_pic {
@@ -719,9 +721,24 @@ h4.add_pic {
   display: flex;
   align-self: flex-start;
   margin-top: 27px;
+  margin-left: 32px;
+  font-size: x-small;
 }
 
 .rectangle {
   width: 83%;
-  height: 30px;
+  height: 34px;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+  border: none;
+  margin-top: 6px;
+}
+
+.validate-button {
+  margin: 53px;
+  background-color: #b9c5cc;
+  color: white;
+  padding: 6px 69px;
+  border: none;
+  border-radius: 60px;
+  cursor: pointer;
 }

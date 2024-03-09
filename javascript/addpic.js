@@ -23,7 +23,7 @@ function upload() {
     modalContent.appendChild(newlogo);
 
     const picture = document.createElement('h4');
-    picture.textContent = "+ Ajouter une photo";
+    picture.textContent = "+ Ajouter photo";
     modalContent.appendChild(picture);
 
 
