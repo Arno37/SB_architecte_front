@@ -684,18 +684,18 @@ figcaption {
 
 img.logo-pic {
   position: absolute;
-  margin-top: 63px;
+  margin-top: 60px;
   width: 12%;
 }
 img.rectangle-img {
-  width: 84%;
+  width: 98%;
   margin-bottom: -6px;
-  height: 33%;
+  height: 25%;
 }
 
 #modal-main-content h4 {
   position: absolute;
-  margin-top: 122px;
+  margin-top: 118px;
   background-color: #b9c5cc;
   height: 3.7%;
   padding-top: 9px;
@@ -710,7 +710,7 @@ img.rectangle-img {
 #modal-main-content p {
   font-size: 7px;
   position: absolute;
-  margin-top: 155px;
+  margin-top: 151px;
 }
 
 h4.add_pic {
@@ -720,14 +720,14 @@ h4.add_pic {
 #modal-main-content label {
   display: flex;
   align-self: flex-start;
-  margin-top: 27px;
-  margin-left: 32px;
+  margin-top: 24px;
+  margin-left: 37px;
   font-size: x-small;
 }
 
 .rectangle {
   width: 83%;
-  height: 34px;
+  height: 37px;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   border: none;
   margin-top: 6px;
@@ -735,10 +735,39 @@ h4.add_pic {
 
 .validate-button {
   margin: 53px;
-  background-color: #b9c5cc;
+  background-color: #b3b3b3;
   color: white;
   padding: 6px 69px;
   border: none;
   border-radius: 60px;
+  cursor: pointer;
+  font-size: small;
+}
+
+img.line-pic {
+  position: absolute;
+  margin-top: 355px;
+  width: 68%;
+}
+
+.arrow-img {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 17px;
+}
+
+#modalpicture {
+  position: relative;
+}
+
+#backButton {
+  position: absolute;
+  bottom: 198px;
+  right: 270px;
+  width: 28%;
+  height: 13px;
+  background: transparent;
+  border: none;
   cursor: pointer;
 }

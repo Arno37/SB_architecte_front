@@ -119,6 +119,9 @@
         </div>
         <div id="newmodal">
             <div id="modalpicture" class='picture'>
+                <button id="backButton">
+                    <img src="./assets/icons/arrow-left.svg" alt="arrow_pic" class="arrow-img" style="display: none;">
+                </button>
                 <img src="./assets/icons/Rectangle 21.svg" alt="add_pic" class="rectangle-img" style="display: none;">
                 <img src="./assets/icons/picture-svgrepo-com 1.svg" alt="new_pic" class="logo-pic"
                     style="display: none;">
@@ -133,11 +136,12 @@
                     <input style="display: none;" type="title" class="rectangle" id="title" name="title-input" value="">
                 </div>
                 <div class="category">
-                    <label for="category-input">Catégorie</label>
-                    <input class="rectangle" type="category" id="category" name="category-input" value=""
-                        style="display: none;">
+                    <label for="category-input" class="category-label">Catégorie
+                        <input type="text" id="category" name="category-input" class="rectangle" style="display: none;">
+                        <i class="fas fa-chevron-down"></i>
+                    </label>
                 </div>
-
+                <img src="./assets/icons/Line 1.svg" alt="line_pic" class="line-pic" style="display: none;">
                 <button type="button" class="validate-button" style="display: none;">valider</button>
 
             </section>

@@ -1,13 +1,16 @@
 function upload() {
     const modalContent = document.getElementById('modal-main-content');
-    // Efface le contenu précédent de la modale
+    
     modalContent.innerHTML = "";
 
-    // Crée les éléments HTML à afficher dans la modale
+    const arrow = document.createElement('img');
+    arrow.src = "./assets/icons/arrow-left.svg";
+    arrow.alt = "arrow_pic";
+    arrow.classList.add("arrow-img");
+    modalContent.appendChild(arrow);
+   
     const newTitle = document.createElement('h3');
     newTitle.textContent = "Ajout photo";
-    
-    // Ajoute les éléments créés à la modale
     modalContent.appendChild(newTitle);
 
     const newImage = document.createElement('img');
@@ -31,6 +34,12 @@ function upload() {
     format.textContent = "jpg, png : 4mo max";
     modalContent.appendChild(format);
 
+    const line = document.createElement('img');
+    line.src = "./assets/icons/Line 1.svg";
+    line.alt = "line_pic";
+    line.classList.add("line-pic");
+    modalContent.appendChild(line);
+
 
 const titleLabel = document.createElement('label');
 titleLabel.setAttribute('for', 'title-input');
@@ -40,7 +49,7 @@ const categoryLabel = document.createElement('label');
 categoryLabel.setAttribute('for', 'category-input');
 categoryLabel.textContent = 'Catégorie';
 
-// Création des éléments input
+
 const titleInput = document.createElement('input');
 titleInput.type = 'text';
 titleInput.className = 'rectangle';
@@ -50,33 +59,26 @@ titleInput.value = '';
 ;
 
 const categoryInput = document.createElement('input');
-categoryInput.type = 'text';
 categoryInput.className = 'rectangle';
 categoryInput.id = 'category';
 categoryInput.name = 'category-input';
-categoryInput.value = '';
 
 
-// Création du bouton
+
 const validateButton = document.createElement('button');
 validateButton.type = 'button';
 validateButton.className = 'validate-button';
 validateButton.textContent = 'valider';
 
-// Ajout des éléments à la section
+
 modalContent.appendChild(titleLabel);
 modalContent.appendChild(titleInput);
 modalContent.appendChild(categoryLabel);
 modalContent.appendChild(categoryInput);
 modalContent.appendChild(validateButton);
-   
+
    
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-    const uploadButton = document.querySelector('.add-photo-button');
-    uploadButton.addEventListener('click', upload);
-});
 
 const section = document.getElementById('newmodal');
 
@@ -93,30 +95,49 @@ const titleInput = document.createElement('input');
 titleInput.type = 'text';
 titleInput.className = 'rectangle';
 titleInput.id = 'title';
-titleInput.name = 'title-input';
-titleInput.value = '';
-;
 
-const categoryInput = document.createElement('input');
-categoryInput.type = 'text';
+
+const categoryInput = document.createElement('inp');
 categoryInput.className = 'rectangle';
 categoryInput.id = 'category';
 categoryInput.name = 'category-input';
-categoryInput.value = '';
+categoryInput.i = 'fas-chevron-down';
+
+const chevronIcon = document.createElement('i');
+chevronIcon.classList.add('fas', 'fa-chevron-down');
+
+categoryInput.insertAdjacentElement('afterend', chevronIcon);
 
 
-// Création du bouton
 const validateButton = document.createElement('button');
 validateButton.type = 'button';
 validateButton.className = 'validate-button';
 validateButton.textContent = 'valider';
 
-// Ajout des éléments à la section
-section.appendChild(titleLabel);
-section.appendChild(titleInput);
-section.appendChild(categoryLabel);
-section.appendChild(categoryInput);
-section.appendChild(validateButton);
+
+    document.addEventListener('DOMContentLoaded', () => {
+        
+        const uploadButton = document.querySelector('.add-photo-button');
+        uploadButton.addEventListener('click', upload);
+        console.log(uploadButton)
+        
+    
+        const backButton = document.getElementById('backButton');
+        backButton.addEventListener('click', () => { 
+            window.location.href = 'editor.html';   
+            
+        });
+    
+        const arrow = document.querySelector('.arrow-img');
+        arrow.addEventListener('click', () => {
+            
+        });
+    });
+
+
+
+
+
    
 
 
