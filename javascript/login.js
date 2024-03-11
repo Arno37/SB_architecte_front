@@ -11,7 +11,7 @@ async function login(email, password) {
                  password: password
              })
          });
- 
+ console.log(response)
          if (response.ok) {
              const data = await response.json(); 
              const token = data.token; 

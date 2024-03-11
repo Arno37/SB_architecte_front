@@ -571,12 +571,12 @@ nav ul {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 
   min-height: 417px;
-  width: 28%;
+  width: 600px;
   padding: 30px;
 
   display: flex;
   flex-direction: column;
-  height: 64%;
+  height: 630px;
 }
 
 .modal-content .close {
@@ -592,15 +592,15 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 15px;
+  padding: 28px;
 }
 
 #modal-main-content h3 {
   font-weight: 200;
   text-align: center;
   line-height: 30px;
-  margin-bottom: 22px;
-  font-size: 1.4em;
+  margin-bottom: 36px;
+  font-size: 2em;
 }
 
 #modal-main-content #previewContainer {
@@ -684,33 +684,32 @@ figcaption {
 
 img.logo-pic {
   position: absolute;
-  margin-top: 60px;
+  margin-top: 79px;
   width: 12%;
 }
 img.rectangle-img {
-  width: 98%;
+  width: 101%;
   margin-bottom: -6px;
   height: 25%;
 }
 
 #modal-main-content h4 {
   position: absolute;
-  margin-top: 118px;
+  margin-top: 161px;
   background-color: #b9c5cc;
   height: 3.7%;
   padding-top: 9px;
   border-radius: 20px;
-  font-size: 10px;
-  width: 27%;
+  width: 25%;
   display: flex;
   justify-content: center;
   color: steelblue;
 }
 
 #modal-main-content p {
-  font-size: 7px;
+  font-size: 10px;
   position: absolute;
-  margin-top: 151px;
+  margin-top: 204px;
 }
 
 h4.add_pic {
@@ -721,16 +720,15 @@ h4.add_pic {
   display: flex;
   align-self: flex-start;
   margin-top: 24px;
-  margin-left: 37px;
-  font-size: x-small;
+  margin-left: 65px;
 }
 
 .rectangle {
-  width: 83%;
-  height: 37px;
+  width: 77%;
+  height: 53px;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   border: none;
-  margin-top: 6px;
+  margin-top: 17px;
 }
 
 .validate-button {
@@ -742,11 +740,14 @@ h4.add_pic {
   border-radius: 60px;
   cursor: pointer;
   font-size: small;
+  margin-top: 88px;
+  width: 45%;
+  height: 6%;
 }
 
 img.line-pic {
   position: absolute;
-  margin-top: 355px;
+  margin-top: 499px;
   width: 68%;
 }
 
@@ -755,6 +756,7 @@ img.line-pic {
   top: 20px;
   left: 20px;
   width: 17px;
+  display: none;
 }
 
 #modalpicture {
@@ -770,4 +772,11 @@ img.line-pic {
   background: transparent;
   border: none;
   cursor: pointer;
+}
+
+#backButton {
+  position: absolute;
+  top: 10px; /* Ajustez la valeur selon votre mise en page */
+  left: 10px; /* Ajustez la valeur selon votre mise en page */
+  z-index: 1; /* Assure que le bouton soit au-dessus des autres éléments */
 }
