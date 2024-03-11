@@ -12,10 +12,7 @@ function upload() {
     modalContent.appendChild(arrow);
     arrow.style.display = 'block';
 
-    const backButton = document.createElement('button');
-    modalContent.appendChild(backButton);
-    
-   
+
    
     const newTitle = document.createElement('h3');
     newTitle.textContent = "Ajout photo";
@@ -91,4 +88,5 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log(button)
         window.location.href = 'editor.html';
     });
+   
 });

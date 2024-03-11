@@ -765,18 +765,12 @@ img.line-pic {
 
 #backButton {
   position: absolute;
-  bottom: 198px;
-  right: 270px;
-  width: 28%;
-  height: 13px;
-  background: transparent;
+  top: -307px;
+  left: -318px;
+  z-index: 1;
+  height: 9px;
+  width: 19px;
+  background-color: transparent;
   border: none;
   cursor: pointer;
-}
-
-#backButton {
-  position: absolute;
-  top: 10px; /* Ajustez la valeur selon votre mise en page */
-  left: 10px; /* Ajustez la valeur selon votre mise en page */
-  z-index: 1; /* Assure que le bouton soit au-dessus des autres éléments */
 }
