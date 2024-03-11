@@ -30,10 +30,18 @@ function upload() {
     newlogo.classList.add("logo-pic");
     modalContent.appendChild(newlogo);
 
-    const picture = document.createElement('h4');
-    picture.textContent = "+ Ajouter photo";
-    modalContent.appendChild(picture);
+    const rectangleImg = document.querySelector('.rectangle-img');
 
+    const addPicButton = document.createElement('button');
+    addPicButton.textContent = "+ Ajouter une photo";
+    modalContent.appendChild(addPicButton);
+
+    addPicButton.addEventListener('click', function() {
+        console.log(addPicButton)
+        
+    });
+
+    rectangleImg.parentNode.appendChild(addPicButton);
 
     const format = document.createElement('p');
     format.textContent = "jpg, png : 4mo max";
