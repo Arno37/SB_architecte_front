@@ -777,3 +777,17 @@ img.line-pic {
   border: none;
   cursor: pointer;
 }
+
+.add-photo-container .addBouton {
+  margin-top: -105px;
+  margin-left: -70px;
+  border-radius: 20px;
+  background-color: #93939354;
+  height: 26px;
+  width: 147px;
+  color: #007c91c2;
+}
+
+#modalContainer .add-photo-container .addBouton {
+  display: none;
+}

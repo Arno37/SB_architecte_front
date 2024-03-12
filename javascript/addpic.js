@@ -37,7 +37,13 @@ function upload() {
     modalContent.appendChild(addPicButton);
 
     addPicButton.addEventListener('click', function() {
-        console.log(addPicButton)
+        console.log(addPicButton, 'ok')
+        addPicButton.addEventListener('click', function() {
+
+            fileInput.click();
+        });
+
+    
         
     });
 
@@ -97,4 +103,21 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = 'editor.html';
     });
    
+});
+const modal = document.getElementById('modalContainer');
+const closeButton = document.getElementById('closeModalButton');
+
+
+function closeModal() {
+    modal.style.display = 'none';
+}
+
+closeButton.addEventListener('click', closeModal);
+
+
+document.addEventListener('click', function(event) {
+    
+    if (event.target === modal) {
+        closeModal(); 
+    }
 });
