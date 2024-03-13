@@ -592,7 +592,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 28px;
+  padding: 30px 60px;
 }
 
 #modal-main-content h3 {
@@ -685,34 +685,8 @@ figcaption {
   display: none;
 }
 
-img.logo-pic {
-  position: absolute;
-  margin-top: 79px;
-  width: 12%;
-}
-img.rectangle-img {
-  width: 142%;
-  margin-bottom: -42px;
-  height: 25%;
-}
 
-#modal-main-content button {
-  background-color: #b9c5cc;
-  height: 4.7%;
-  padding-top: 9px;
-  border-radius: 20px;
-  display: flex;
-  justify-content: center;
-  border: none;
-  height: 36px;
-  margin-bottom: -16px;
-}
 
-#modal-main-content p {
-  font-size: 10px;
-  position: absolute;
-  margin-top: 204px;
-}
 
 h4.add_pic {
   color: #fff;
@@ -754,29 +728,79 @@ img.line-pic {
   width: 68%;
 }
 
-.arrow-img {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  width: 17px;
-  display: none;
-}
+
 
 #modalpicture {
   position: relative;
 }
 
-#backButton {
+#modal-main-content #backButton {
   position: absolute;
-  top: -307px;
-  left: -318px;
+  top: 20px;
+  left: 20px;
   z-index: 1;
-  height: 9px;
-  width: 19px;
+  height: 21px;
+  width: 21px;
   background-color: transparent;
   border: none;
+  border-radius: 0;
+  padding: 0;
   cursor: pointer;
 }
+
+#modal-main-content #backButton .arrow-img {
+  width: 21px;
+  height:21px;
+}
+
+
+
+#modal-main-content #container-new-pic {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: #E8F1F6;
+  align-items: center;
+  padding: 20px;
+  gap: 8px;
+  border-radius: 3px;
+}
+
+
+
+#modal-main-content #container-new-pic img.picture-placeholder {
+  width: 76px
+}
+
+
+
+#modal-main-content #container-new-pic button.add-picture {
+  background-color: #CBD6DC;
+  border-radius: 50px;
+  justify-content: center;
+  border: none;
+  height: 36px;
+  font-family: Work Sans;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: 0em;
+  text-align: center;
+  color: #306685;
+  padding: 0 30px;
+  max-width: 200px;
+}
+
+
+#modal-main-content #container-new-pic p {
+  font-size: 10px;
+}
+
+#modal-main-content #container-new-pic hr.separator-min {
+  margin:0;
+}
+
+/* 
 
 .add-photo-container .addBouton {
   margin-top: -105px;
@@ -787,7 +811,9 @@ img.line-pic {
   width: 147px;
   color: #007c91c2;
 }
-
+ */
 #modalContainer .add-photo-container .addBouton {
   display: none;
 }
+
+

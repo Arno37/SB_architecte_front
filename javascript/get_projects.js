@@ -3,13 +3,17 @@ async function deleteItemFromApi (idPhoto) {
     
     const response = await fetch(`http://localhost:5678/api/works/${idPhoto}`,{
            method: 'DELETE',
+           // envoi  d'une requête DELETE à l'API avec l'ID de la photo à supprimer et le token d'authentification de l'utilisateur.
            headers: {
                'Authorization': `Bearer ${userToken}`,
+               //variable contenant le jeton d'authentification de l'utilisateur stocké localement dans le navigateur
+               //Bearer indique au serveur qu'il s'agit d'un jeton d'accès au format JWT (JSON Web Token).
                'Content-Type': 'application/json'
+               // indique au serveur que les données envoyées dans le corps de la requête seront au format JSON (JavaScript Object Notation)
            }
        });
        
-       if (response.ok) {
+       if (response.ok) {// vérification de la requête de connexion: statut HTTP 2OO OK)
          console.log('image supprimee')
        } else {
          console.log('un probleme est survenu lors de la suppression')
@@ -18,9 +22,12 @@ async function deleteItemFromApi (idPhoto) {
 async function fetchPhotosFromAPI() {
     try {
         const response = await fetch('http://localhost:5678/api/works/');
+        
         const json = await response.json();
         
+        
         const modalContainer = document.getElementById("previewContainer");
+       
 
         json.forEach(work => {
             const divPhotoContainer = document.createElement("div");
