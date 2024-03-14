@@ -83,19 +83,24 @@ function upload() {
 
 
     const addPicButton = document.createElement('button');
+    
     addPicButton.textContent = "+ Ajouter une photo";
     addPicButton.classList.add("add-picture");
-
-    /* Action upload de fichier 
-    <input type="file" id="fileInput" style="display: none;">
     addPicButton.addEventListener('click', function() {
-        console.log(addPicButton, 'ok')
-        addPicButton.addEventListener('click', function() {
+        fileInput.click();
+        
+    });
+    
+    const fileInput = document.createElement('input');
+fileInput.type = 'file';
 
-            fileInput.click();
-        });
+fileInput.addEventListener('change', function() {
+    
+});
+    
        
-    });*/
+    
+    
 
     const addTextUploadMax = document.createElement('p');
     addTextUploadMax.textContent = "jpg, png : 4mo max";
@@ -139,6 +144,21 @@ function upload() {
     validateButton.type = 'button';
     validateButton.className = 'validate-button';
     validateButton.textContent = 'Valider';
+    console.log(validateButton)
+
+    const selectElement = document.createElement('option');
+        selectElement.innerHTML = `
+            <option value="choix1">Hotels & restaurants</option>
+            <option value="choix2">Musées</option>
+            <option value="choix3">Bars</option>
+        `;
+       
+        const iconElement = document.createElement('i');
+        iconElement.classList.add('fas', 'fa-chevron-down',)
+
+        modalContent.appendChild(iconElement)
+
+
 
     modalContent.appendChild(titleLabel);
     modalContent.appendChild(titleInput);

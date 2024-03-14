@@ -120,18 +120,22 @@
             <section id="validate">
                 <div class="title">
                     <label for="title-input">Titre</label>
-                    <input style="display: none;" type="title" class="rectangle" id="title" name="title-input" value="">
+                    <input type="title" class="rectangle" id="title" name="title-input" value="">
                 </div>
                 <div class="category">
-                    <label for="category-input" class="category-label">Catégorie
-                        <input type="text" id="category" name="category-input" class="rectangle" style="display: none;">
-                        <i class="fas fa-chevron-down"></i>
-                    </label>
-                </div>
-                <img src="./assets/icons/Line 1.svg" alt="line_pic" class="line-pic" style="display: none;">
-                <button type="button" class="validate-button" style="display: none;">Valider</button>
+                    <label for="category-input" class="category-label">Catégorie</label>
+                    <select id="category" name="category-input" class="rectangle">
+                        <option value="choix1">Hotels & restaurants</option>
+                        <option value="choix2">Musées</option>
+                        <option value="choix3">Bars</option>
+                    </select>
+                    <i class="fas fa-chevron-down"></i>
 
+                </div>
+                <img src="./assets/icons/Line 1.svg" alt="line_pic" class="line-pic">
+                <button type="button" class="validate-button">Valider</button>
             </section>
+
 
         </div>
     </div>
