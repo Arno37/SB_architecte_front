@@ -27,7 +27,7 @@ async function postNewPicture(imageValue, titleValue, categoryId) {
              const token = data.token; 
              //le token d'authentification est extrait de la réponse JSON//
              localStorage.setItem('token', token);
-             // Stocke le token retourné par le serveur dans le stockage local du navigateur, ce qui permet de le récupérer et de l'utiliser ultérieurement pour authentifier les requêtes. 
+             // Stocke le token retourné par le serveur dans le stockage local du navigateur, ce qui permet de le récupérer et de l'utiliser ultérieurement pour authentifier les requêtes 
              window.location.href = "editor.html"; 
              //puis redirection vers la page "editor.html" //
          } 
@@ -181,7 +181,7 @@ async function upload() {
         const formData = new FormData(this);
 
         try {
-          const userToken = localStorage.getItem('token');
+          
           const response =   await fetch('http://localhost:5678/api/works/', {
                 method: 'POST',
                 headers: {
@@ -190,6 +190,7 @@ async function upload() {
             })
 
             if (response.ok) {
+                
                 console.log('Projet ajouté avec succès')
          
             } else {

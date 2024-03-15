@@ -28,7 +28,7 @@ async function login(email, password) {
              const token = data.token; 
              //le token d'authentification est extrait de la réponse JSON//
              localStorage.setItem('token', token); 
-             // le token  est stocké localement dans le stockage localStorage du navigateur //
+             // le token  est stocké localement dans le localStorage du navigateur //
              window.location.href = "editor.html";
              //puis redirection vers la page "editor.html" //
          } 

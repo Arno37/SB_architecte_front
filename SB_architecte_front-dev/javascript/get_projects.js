@@ -1,5 +1,6 @@
 async function deleteItemFromApi (idPhoto) {
     const userToken = localStorage.getItem('token');
+    
     //récupération d'un token fourni par l'API web storage restant disponible après fermeture du navigateur
     const response = await fetch(`http://localhost:5678/api/works/${idPhoto}`,{
            method: 'DELETE',

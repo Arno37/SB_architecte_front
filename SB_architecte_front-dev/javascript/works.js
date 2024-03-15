@@ -1,20 +1,21 @@
 async function getWorks() {
     //Définit une fonction asynchrone nommée getWorks() qui récupère des travaux à partir de l'API
-    try { //Démarre un bloc de code qui sera susceptible de générer des erreurs avec le 'catch'
+    try { //Démarre un bloc de code qui sera susceptible de générer des erreurs avec le 'try'/'catch'
         const response = await fetch('http://localhost:5678/api/works/');    
 //  Effectue une requête GET à l'URL spécifiée. La fonction fetch() retourne une promesse qui sera résolue une fois que la requête sera terminée. 
 // L'opérateur await permet d'attendre que cette promesse se résolve avant de continuer l'exécution du code
         const dataWorks = await response.json();
-        // Attend que la promesse retournée par response.json() soit résolue, ce qui convertit le corps de la réponse HTTP en format JSON et le stocke dans la variable dataWorks.
+        // en attente  que la promesse retournée par response.json() soit résolue, ce qui convertit le corps de la réponse HTTP en format JSON et le stocke dans la variable dataWorks.
+
         
         const gallery = document.querySelector('.gallery');
        //Sélectionne l'élément HTML ayant la classe CSS .gallery et le stocke dans la variable '.gallery'
         
 
       for (const currentWork of dataWorks) {
-        //parcours tous les éléments répétables du tableau JSON
+        //parcours tous les éléments itérablee du tableau JSON
             const figure = document.createElement('figure');
-            // Crée un nouvel élément HTML 'figure' et le stocke dans la variable figure
+            // Création d'un nouvel élément HTML 'figure' et le stocke dans la variable figure
             figure.dataset.category = currentWork.categoryId
             //Ajout d'un attribut de données category à l'élément 'figure' pour stocker l'ID de la catégorie de l'œuvre actuelle. 
             //Cet attribut de données peut être utilisé pour filtrer ou classer les œuvres par catégorie.
@@ -44,36 +45,6 @@ async function getWorks() {
     }
 }
 
-
-
-function setfilter(categoryId) {
-    // fonction qui est utilisée pour filtrer les éléments de la galerie en fonction de la catégorie
-    const gallery = document.querySelector('.gallery');
-    // sélection de l'élément HTML ayant la classe CSS .gallery et le stocke dans la variable gallery
-    const figures = gallery.querySelectorAll('figure')
-    // sélection de l'élément HTML ayant la classe CSS .gallery et le stocke dans la variable gallery
-
-    for (const figure of figures) {
-        //Itère à travers chaque élément 'figure' de la galerie.
-
-        if (figure.dataset.category == categoryId) {
-            // Vérification si la valeur de l'attribut de data.category de l'élément 'figure' correspond à la catégorie spécifiée par categoryId
-            figure.style.display = 'block'
-            // Si l'élément 'figure'correspond il est affiché
-        }
-        else if (categoryId == 0) {
-            // Vérifie si la categoryId est égale à zéro. Cela représente l'option de filtre "Tous les éléments"
-            figure.style.display = 'block'
-            // Si la categoryId est zéro, tous les éléments 'figure' sont affichés
-        }
-        else {
-            figure.style.display = 'none'
-            // Si aucune des conditions précédentes n'est bonne, cela signifie que l'élément 'figure' ne correspond pas à la catégorie spécifiée et rien ne s'affiche
-        }
-    }
-}
-
-
 async function getCategories() {
     // fonction asynchrone nommée 'getCategories' qui est utilisée pour récupérer les catégories à partir d'une API
     try {
@@ -84,7 +55,7 @@ async function getCategories() {
         //Création d'un nouvel élément 'button' 
         button.textContent = 'Tous';
         //Attribution du texte "Tous"
-        button.addEventListener("click", () => setfilter(0))
+        button.addEventListener("click", () => setfilter)
         // Ajout d'un écouteur d'événements de clic au bouton, qui appelle la fonction setfilter(0) au click et toutes les images s'affichent
         filters.appendChild(button)
         //Ajout du bouton à l'intérieur de l'élément 'filters'
@@ -103,7 +74,7 @@ async function getCategories() {
             button.textContent = currentCategory.name;
             // Définit le texte du bouton avec le nom de la catégorie actuelle. Cela affichera le nom de la catégorie sur le bouton.
             button.addEventListener("click", () => setfilter(currentCategory.id))
-//Ajout d'un écouteur d'événements de clic au bouton. Lorsque le bouton est cliqué, la fonction setfilter() est appelée avec l'ID de la catégorie actuelle comme argument
+            //Ajout d'un écouteur d'événements de clic au bouton. Lorsque le bouton est cliqué, la fonction setfilter() est appelée avec l'ID de la catégorie actuelle comme argument
             filters.appendChild(button)
             //Ajout du bouton à l'intérieur de l'élément HTML sélectionné par filters. Cet élément est le conteneur des filtres où tous les boutons de catégorie sont affichés.
         }
@@ -114,9 +85,38 @@ async function getCategories() {
     }
 }
 
-
 document.addEventListener('DOMContentLoaded', () => {
     // Au chargement complet de la page HTML les travaux et les catégories sont récupérer
     getWorks();
     getCategories();
 })
+
+
+
+function setfilter(categoryId) {
+    // fonction qui est utilisée pour filtrer les éléments de la galerie en fonction de leur catégorie
+    const gallery = document.querySelector('.gallery');
+    // sélection de l'élément HTML ayant la classe CSS .gallery et le stocke dans la variable gallery
+    const figures = gallery.querySelectorAll('figure')
+    // sélection de tous éléments 'figure' du HTML  et le stocke dans la variable gallery (figures enfant de gallery)
+
+    for (const figure of figures) {
+        //boucle qui itère sur chaque élément <figure> dans la liste figures
+
+        if (figure.dataset.category == categoryId) {
+            // condition qui vérifie si la valeur de l'élément 'figure' est égale à la catégorie 'categoryId'
+            figure.style.display = 'block'
+            // Si l'élément 'figure'correspond il est affiché
+        }
+        else if (categoryId == 0) {
+            // Vérifie si la categoryId est égale à zéro. Cela représente l'option de filtre "Tous les éléments"
+            figure.style.display = 'block'
+            // Si la categoryId est égale à zéro, tous les éléments 'figure' sont affichés
+        }
+        else {
+            figure.style.display = 'none'
+            // Si la categoryId n'est pas égale à zéro, aucun éléments 'figure' ne sera affiché
+        }
+    }
+}
+
