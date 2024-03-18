@@ -669,8 +669,8 @@ figcaption {
 }
 
 #contact input[type="submit"] {
-  width: 200px;
-  height: 45px;
+  width: 210px;
+  height: 40px;
   margin-top: 40px;
 }
 
@@ -698,7 +698,7 @@ h4.add_pic {
 
 .rectangle {
   width: 100%;
-  height: 50px;
+  height: 60px;
   box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
   border: none;
   margin-top: 17px;
@@ -750,12 +750,14 @@ img.line-pic {
 #modal-main-content #container-new-pic {
   display: flex;
   flex-direction: column;
-  width: 93%;
+  width: 384px;
   background-color: #e8f1f6;
   align-items: center;
-  padding: 20px;
+  padding: 17px 17px 31px;
   gap: 8px;
   border-radius: 3px;
+  max-height: 142px;
+  padding-top: 0px;
 }
 
 #modal-main-content #container-new-pic img.picture-placeholder {
@@ -775,7 +777,7 @@ img.line-pic {
   letter-spacing: 0em;
   text-align: center;
   color: #306685;
-  padding: 0 30px;
+  padding: 10px 21px;
   max-width: 200px;
 }
 
@@ -792,25 +794,14 @@ img.line-pic {
   flex-direction: column;
   width: 100%;
 }
-/* 
 
-.add-photo-container .addBouton {
-  margin-top: -105px;
-  margin-left: -70px;
-  border-radius: 20px;
-  background-color: #93939354;
-  height: 26px;
-  width: 147px;
-  color: #007c91c2;
-}
- */
 #modalContainer .add-photo-container .addBouton {
   display: none;
 }
 
 button.validate-button {
   width: 62%;
-  height: 7%;
+  height: 13%;
   margin: 2px;
   background-color: #a7a7a7;
   font-size: unset;

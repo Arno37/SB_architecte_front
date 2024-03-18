@@ -26,8 +26,6 @@ async function fetchPhotosFromAPI() {
         
         const json = await response.json();
         //extraction des données JSON en un objet JavaScript exploitable
-        
-        
         const modalContainer = document.getElementById("previewContainer");
        
 
@@ -36,7 +34,6 @@ async function fetchPhotosFromAPI() {
             // pour chaque élément work du tableau JSON, le code crée un nouvel élément HTML (div)
             const divPhotoContainer = document.createElement("div");
             divPhotoContainer.className = 'photo-container';
-            
 
             const divPhoto = document.createElement("div");
             divPhoto.className = 'photo'

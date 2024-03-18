@@ -27,7 +27,7 @@ async function postNewPicture(imageValue, titleValue, categoryId) {
              const token = data.token; 
              //le token d'authentification est extrait de la réponse JSON//
              localStorage.setItem('token', token);
-             // Stocke le token retourné par le serveur dans le stockage local du navigateur, ce qui permet de le récupérer et de l'utiliser ultérieurement pour authentifier les requêtes. 
+             // Stocke le token retourné par le serveur dans le stockage local du navigateur, ce qui permet de le récupérer et de l'utiliser ultérieurement pour authentifier les requêtes 
              window.location.href = "editor.html"; 
              //puis redirection vers la page "editor.html" //
          } 
@@ -49,12 +49,13 @@ async function upload() {
     modalContent.innerHTML = "";
 
 
-   
+//bouton de retour vers la modale gelerie photos
     const backButton = document.createElement('button');
     backButton.id = 'backButton'
     backButton.addEventListener('click', function() {
         console.log(backButton)
         window.location.href = 'editor.html';
+        //redirection vers editor.html
     });
 
     const backImage = document.createElement('img');
@@ -66,7 +67,6 @@ async function upload() {
     modalContent.appendChild(backButton)
 
 
-   
     const newTitle = document.createElement('h3');
     newTitle.textContent = "Ajout photo";
     modalContent.appendChild(newTitle);
@@ -88,27 +88,60 @@ async function upload() {
     addPicButton.classList.add("add-picture");
     addPicButton.addEventListener('click', function() {
         fileInput.click();
+        //déclenchement au click d'accéder aux fichiers de l'ordinateur
         
     });
     
+
+
+
     const fileInput = document.createElement('input');
     fileInput.name = 'image';
     fileInput.type = 'file';
-    
-    fileInput.accept= 'image/*';
-
-        
+    fileInput.style.display='none'
 
     const addTextUploadMax = document.createElement('p');
     addTextUploadMax.textContent = "jpg, png : 4mo max";
     addTextUploadMax.classList.add("format");
 
+    
+    fileInput.accept = 'image/jpeg, image/png';
+    fileInput.required = true;
+    //nécessité de mettre fichier au format jpeg ou png
 
     containerNewPicture.appendChild(picturePlaceholder);
     containerNewPicture.appendChild(addPicButton);
-    containerNewPicture.appendChild(fileInput);
-    containerNewPicture.appendChild(addTextUploadMax);
 
+    containerNewPicture.appendChild(addTextUploadMax);
+    
+    
+    fileInput.addEventListener('change',function() {
+        //fonction de rappel systématique dès changement de fichier
+            if(this.files[0].size > 4 * 1024 * 1024){
+                //fichiers premier de la liste
+                alert('La taille maximum de la photo est supérieure à 4Mo')
+                this.value = "";
+            } else {
+                
+                containerNewPicture.innerHTML = "";
+                // Supprimer le contenu actuel de containerNewPicture
+
+                const selectedImage = document.createElement('img');
+                selectedImage.src = URL.createObjectURL(this.files[0]);
+                //creation URL local pour le fichier sélectionné
+                // fait référence au premier fichier dans le champ de fichier 
+                selectedImage.alt = "Photo chargée";
+                
+                selectedImage.style.maxHeight = "172px";
+                
+                validateButton.style.backgroundColor = "#1D6154";
+                //changement de couleur dès chargement de la photo dans le placeholder
+                
+                containerNewPicture.appendChild(selectedImage);
+                // Ajouter l'image à containerNewPicture
+            }
+        }
+    )
 
 
 
@@ -125,11 +158,16 @@ async function upload() {
     titleInput.className = 'rectangle';
     titleInput.id = 'title';
     titleInput.name = 'title';
+    titleInput.required = true;
+     //obligation de remplir le champs
 
     const categorySelect = document.createElement('select');
     categorySelect.className = 'rectangle';
     categorySelect.id = 'category';
     categorySelect.name = 'category';
+   
+    categorySelect.required = true;
+    //obligation de remplir le champs
     
 
     const response = await fetch('http://localhost:5678/api/categories/');
@@ -138,13 +176,14 @@ async function upload() {
     const dataCategories = await response.json();
     //Convertit le corps de la réponse HTTP en format JSON et le stocke dans la variable 'dataCategories'
 
-    console.log(dataCategories)
 
     dataCategories.forEach(category => {
-        console.log(category)
+        //boucle sur chaque objet de catégories
         const optionCategory = document.createElement('option');
         optionCategory.value = category.id
+        //assocation de l'id à la value
         optionCategory.textContent = category.name;
+        //association du nom au text
 
         categorySelect.appendChild(optionCategory)
     })
@@ -162,8 +201,7 @@ async function upload() {
     formAddProject.id = 'form-add-work'
     formAddProject.enctype= 'multipart/form-data'
 
-
-    formAddProject.appendChild(containerNewPicture)
+    formAddProject.appendChild(fileInput);
     formAddProject.appendChild(titleLabel);
     formAddProject.appendChild(titleInput);  
     formAddProject.appendChild(categoryLabel);
@@ -171,26 +209,33 @@ async function upload() {
     formAddProject.appendChild(separator);
     formAddProject.appendChild(validateButton);
 
+
+    modalContent.appendChild(containerNewPicture)
     modalContent.appendChild(formAddProject)
 
-
+//(formAddProject correspond au conteneur qui concerne la sélection du fichier)
     formAddProject.addEventListener('submit', async function (event) {
+        //ajout d'un écouteur d'évènement à la soumission du formulaire puis la fonction anonyme est déclenchée
         event.preventDefault();
-        console.log(this)
+        //empêchement de recharger la page
 
         const formData = new FormData(this);
+        //récupération de toutes les données du formulaire (champs de saisie et fichier téléchargé)
 
         try {
-          const userToken = localStorage.getItem('token');
+          const token = localStorage.getItem('token');
+          //récupération du token dans le localstorage du navigateur
           const response =   await fetch('http://localhost:5678/api/works/', {
                 method: 'POST',
                 headers: {
-                    'Authorization': `Bearer ${userToken}`,
-                },                body: formData
+                    'Authorization': `Bearer ${token}`,
+                 }, 
+                body: formData
             })
 
-            if (response.ok) {
+            if (response.ok) {                
                 console.log('Projet ajouté avec succès')
+  
          
             } else {
                 console.log('Problème lors de l ajout du projet')
@@ -204,17 +249,8 @@ async function upload() {
     })
 
 
-
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const uploadButton = document.querySelector('.add-photo-button');
-    uploadButton.addEventListener('click', upload);
-
-
-  
-});
 const modal = document.getElementById('modalContainer');
 const closeButton = document.getElementById('closeModalButton');
 
@@ -231,4 +267,30 @@ document.addEventListener('click', function(event) {
     if (event.target === modal) {
         closeModal(); 
     }
+});
+
+
+function checkAuthentification() {
+    const token = localStorage.getItem('token');
+
+    
+    if (!token) {
+        window.location.href = 'login.html';
+        // Si le token n'est pas présent, rediriger vers la page login.html
+    }
+}
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    
+    
+    checkAuthentification()
+    // Vérification de l'autorisation d'accès à la page
+
+    const uploadButton = document.querySelector('.add-photo-button');
+    uploadButton.addEventListener('click', upload);
+
+  
+    
 });
