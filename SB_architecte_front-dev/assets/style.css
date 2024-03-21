@@ -592,7 +592,7 @@ nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 11px 44px;
+  padding: 12px 30px;
 }
 
 #modal-main-content h3 {
@@ -606,8 +606,8 @@ nav ul {
 #modal-main-content #previewContainer {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
-  row-gap: 25px;
+  gap: 8px;
+  justify-content: normal;
 }
 
 #modal-main-content #previewContainer img {
