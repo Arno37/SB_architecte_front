@@ -1,6 +1,7 @@
- - # SB_architecte_front
+# Créez une page web dynamique avec JavaScript
 
-Frontend application for SB_architecte project.
+![image](https://github.com/Arno37/SB_architecte_front/assets/140819974/a94381ea-3f2e-4194-8909-c19ba71ea311)
+
 
 ## About
 
