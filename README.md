@@ -1,6 +1,6 @@
 # Créez une page web dynamique avec JavaScript
 
-[Clik here](http://127.0.0.1:5500/SB_architecte_front-dev/editor.html)
+To access my site click [here](http://127.0.0.1:5500/SB_architecte_front-dev/editor.html)
 
 
 ## About
