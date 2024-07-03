@@ -1,6 +1,6 @@
 # Créez une page web dynamique avec JavaScript
 
-![image](https://github.com/Arno37/SB_architecte_front/assets/140819974/a94381ea-3f2e-4194-8909-c19ba71ea311)
+![lien](http://127.0.0.1:5500/SB_architecte_front-dev/index.html)
 
 
 ## About
