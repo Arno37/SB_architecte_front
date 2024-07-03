@@ -1,7 +1,5 @@
 # Créez une page web dynamique avec JavaScript
-
-## Site Access
-To access my site click [here](http://127.0.0.1:5500/SB_architecte_front-dev/editor.html)
+![image](https://raw.githubusercontent.com/Arno37/Sophie_Bluel-Architecte_d-interieur_FE/main/src/pic/archi.png)<br><br><br><br><br>
 
 
 ## About
