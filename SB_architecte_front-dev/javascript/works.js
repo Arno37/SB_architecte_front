@@ -55,7 +55,7 @@ async function getCategories() {
         //Création d'un nouvel élément 'button' 
         button.textContent = 'Tous';
         //Attribution du texte "Tous"
-        button.addEventListener("click", () => setfilter)
+        button.addEventListener("click", () => setfilter(0));
         // Ajout d'un écouteur d'événements de clic au bouton, qui appelle la fonction setfilter(0) au click et toutes les images s'affichent
         filters.appendChild(button)
         //Ajout du bouton à l'intérieur de l'élément 'filters'
