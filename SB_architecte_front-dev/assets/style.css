@@ -171,8 +171,8 @@ nav ul {
   list-style-type: none;
 }
 nav li {
-  padding: 0 10px;
-  font-size: 1.2em;
+  padding: 0 50px;
+ 
 }
 
 li:hover {
@@ -313,7 +313,7 @@ button[type="submit"] {
 footer nav ul {
   display: flex;
   justify-content: flex-end;
-  margin: 2em;
+  margin: 0.5em;
 }
 
 header nav ul li a {
@@ -505,8 +505,9 @@ label#name {
 }
 
 nav ul {
-  padding-top: none;
-  gap: 20px;
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
 
 #contact .send {
