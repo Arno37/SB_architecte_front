@@ -607,7 +607,7 @@ nav ul {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: normal;
+  justify-content: center;
 }
 
 #modal-main-content #previewContainer img {

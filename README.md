@@ -8,6 +8,8 @@ SB_architecte_front is a React-based frontend application that interacts with th
 
 ## Backend Repository
 
+http://localhost:5678/api-docs/
+
 The backend server for this project can be found at [SB_architecte_back - Backend Repository](https://github.com/Arno37/SB_architecte_back). Make sure to set up and run the backend server before using this frontend application.
 
 ## Getting Started
