@@ -1,5 +1,5 @@
 # Créez une page web dynamique avec JavaScript
-![image](https://raw.githubusercontent.com/Arno37/Sophie_Bluel-Architecte_d-interieur_FE/tree/dev/SB_architecte_front-dev/assets/images/archi.png)<br><br><br><br><br>
+![image](https://raw.githubusercontent.com/Arno37/Sophie_Bluel-Architecte_d-interieur_FE/tree/dev/SB_architecte_front-dev/images/archi.png)<br><br><br><br><br>
 
 
 ## About
