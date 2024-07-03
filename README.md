@@ -1,6 +1,6 @@
 # Créez une page web dynamique avec JavaScript
 
-![lien](http://127.0.0.1:5500/SB_architecte_front-dev/index.html)
+(http://127.0.0.1:5500/SB_architecte_front-dev/index.html)
 
 
 ## About
